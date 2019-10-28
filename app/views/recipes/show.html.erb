@@ -1,0 +1,20 @@
+<h3><%= @recipe.title %></h3>
+<% if @recipe.chef %>
+  <blockquote clas='blockquote'>
+    <footer class="blockquote-footer"><%= @recipe.chef.name %></footer>
+  </blockquote>
+<% end %>
+<div class="row">
+  <div class="col-md-12">
+    <img src="<%= @recipe.image_url %>" alt="Nature" class="float-left" width="600">
+    <div class="float-left col-offest-1 col-md-5">
+      <p><%= @recipe.description %></p>
+      <% @recipe.tags.each do |tag| %>
+        <span class='badge badge-pill badge-warning'><%= tag.name %></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-2 page-top">
+    <%= link_to 'Back to Listing', root_path, class: 'btn btn-info' %>
+  </div>
+</div>
