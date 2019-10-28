@@ -1,25 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version - 2.6.0
 
-Things you may want to cover:
+* Setup
 
-* Ruby version
+	* bundle install
+	* rake db:create db:migrate db:seed
+	* rails s ( localhost:3000 which routes to recipes index )
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# marley_spoon
+* Added Cron job which runs every one hour to sync data from contentful in case new data is added.

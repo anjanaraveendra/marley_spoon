@@ -21,6 +21,6 @@
 set :environment, Rails.env
 set :output, 'log/whenever.log'
 
-every 1.minute do
+every 1.hour do
   runner "ContentfulDataImportService.new.call"
 end
